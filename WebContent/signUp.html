@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="indexStyleSheet.css" >
+<title>SIGN UP</title>
+
+<script>
+
+
+function uploadImage(){
+	
+	document.getElementById("imageUpload").click();
+}
+
+
+
+var loadFile = function(event) {
+    var profile = document.getElementById('profileImage');
+    profile.src = URL.createObjectURL(event.target.files[0]);
+    
+  };
+
+
+</script>
+
+</head>
+<body>
+ 
+<header>
+<h1>ONLINE BOOK PORTAL</h1>
+</header>
+ 
+
+ 
+<section>
+
+<p align="right" style="padding-right:20px;" ><font size="2" color="#545454">Have an Account? <a href="index.html">Click here to LogIn </a></font></p>
+ 
+<div align="center">
+
+
+<form action="AddUser" method="POST" enctype="multipart/form-data" >
+
+<font size="4" color="#545454"><strong>SIGN UP </strong></font>
+<br><br>
+<image id="profileImage" src="images/default_profile.png" height="150" onClick="uploadImage()" style="border:3px solid #545454;border-radius:15px;" /><br>
+<input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" style="display:none;" onchange="loadFile(event)" ><br>
+<input type="text" placeholder="NAME" size="30" name="name" style="border:2px solid #545454;border-radius:5px;" /><br>
+<input type="text" placeholder="ADDRESS" size="30" name="address" style="border:2px solid #545454;border-radius:5px;" /><br>
+<input type="text" placeholder="STATE" size="30" name="state" style="border:2px solid #545454;border-radius:5px;" /><br>
+<input type="text" placeholder="PINCODE" size="30" name="pin" style="border:2px solid #545454;border-radius:5px;" /><br>
+<input type="text" placeholder="PHONE NO" size="30" name="phone" style="border:2px solid #545454;border-radius:5px;" /><br>
+<input type="email" placeholder="EMAIL" size="30" name="email" style="border:2px solid #545454;border-radius:5px;" /><br> 
+<input type="password" placeholder="PASSWORD" size="30" name="password" style="border:2px solid #545454;border-radius:5px;"  /><br>
+<input type="submit" value="SIGN UP" size="30"  style="border:3px solid #545454;border-radius:7px;" />
+
+</form>
+
+</div>
+ 
+</section>
+ 
+</body>
+</html>
